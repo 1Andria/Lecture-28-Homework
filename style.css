@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #eee;
+    justify-content: space-evenly;
+}
+.Todo{
+    color: #007FDB;
+    font-family: Inter;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.container{
+    width: 440px;
+    height: 636px;
+    border-radius: 10px;
+    background: #FFF;
+    overflow-y: scroll;
+    overflow-x:hidden ;
+    scrollbar-color: #007FDB white;
+    scrollbar-width: thin;
+    
+    
+}
+.image_div{
+    max-width: 430px;
+    height: 202px;
+    border-radius: 10px 10px 0px 0px;
+    background: url(./images/Rectangle\ 2.png) lightgray 50% / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding-right: 28px;
+    padding-bottom: 10px;
+}
+.day{   
+    color: #FFF;
+    font-family: "Russo One";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.information_add{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.in_btn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 23px;
+}
+.clock{
+    color: #FFF;
+    font-family: "Russo One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.input{
+    width: 275px;
+    height: 49px;
+    border-radius: 5px;
+    background: #EBEFF2;
+    border: none;
+    font-size: 16px;
+    background-image: url(./images/checked.png);
+    background-repeat: no-repeat;
+    background-position-x:14px ;
+    background-position-y:12px ;
+    padding-left: 40px;
+}
+.input::placeholder{
+    color: #888;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.btn{
+    width: 88px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background: #20EEB0;
+}
+.btn:hover{
+    opacity: 0.75;
+}
+.tasksUl{
+    list-style: none;
+    color: #0D0D0D;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+    padding-left: 29px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+
+    
+    
+}
+.tasksLi{
+    height: 50px;
+    position: relative;
+    
+}
+.point{
+    display: flex;
+    gap: 14px;
+    left: 300px;
+    top: 15px;
+    position: absolute;
+}
+.radio{
+    width: 20px;
+    height: 20px;
+    
+}
+.task{
+    color: #0D0D0D;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.time{
+    color: #888;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+.overall{
+    display: flex;
+    flex-direction: column;
+}
+.trash{
+    cursor: pointer;
+}
+.trash:hover{
+    filter: brightness(0) saturate(100%) invert(59%) sepia(56%) saturate(2300%) hue-rotate(318deg) brightness(101%) contrast(116%);
+}
+@media (max-width:690px) {
+    .body{
+        
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .container{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 360px;
+    }
+    .tasksUl{
+        width: 350px;
+    }
+    .input{
+        width: 220px;
+    }
+    .btn{
+        width: 68px;
+    }
+    .point{
+        left: 240px;
+    }
+}
