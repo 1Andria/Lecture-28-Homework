@@ -22,8 +22,7 @@ let daysOfWeek = [
   "Saturday",
 ];
 let dayOfWeek = daysOfWeek[week.getDay()];
-console.log(dayOfWeek);
-day.textContent = dayOfWeek + " " + days;
+day.textContent = dayOfWeek.slice(0, 3) + " " + days;
 
 let data = JSON.parse(localStorage.getItem("tasks")) || [];
 
