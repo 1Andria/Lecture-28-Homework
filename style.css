@@ -129,6 +129,11 @@
     position: relative;
     
 }
+.tasksLiline{
+    height: 50px;
+    position: relative;
+    text-decoration: line-through;
+}
 .point{
     display: flex;
     gap: 14px;

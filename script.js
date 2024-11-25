@@ -52,14 +52,19 @@ function CreateTasks(task) {
   trash.classList.add("trash");
   div.appendChild(trash);
   inp.addEventListener("click", () => {
-    // if ((inp.checked = false)) {
-    //   inp.checked = true;
-    // } else {
-    //   inp.checked = false;
-    // }
     task.checked = inp.checked;
+    if (task.checked === true) {
+      li.classList.add("tasksLiline");
+    } else {
+      li.classList.remove("tasksLiline");
+    }
     localStorage.setItem("tasks", JSON.stringify(data));
   });
+  if (task.checked === true) {
+    li.classList.add("tasksLiline");
+  } else {
+    li.classList.remove("tasksLiline");
+  }
   trash.addEventListener("click", () => {
     li.remove();
     data = data.filter((tasqi) => {
